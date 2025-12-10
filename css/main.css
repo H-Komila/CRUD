@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Alfa+Slab+One&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Serif+Display:ital@0;1&family=Danfo&family=Diplomata&family=DynaPuff:wght@400..700&family=Fascinate&family=Fascinate+Inline&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Fugaz+One&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Luckiest+Guy&family=Mea+Culpa&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Paprika&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Port+Lligat+Sans&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rosarivo:ital@0;1&family=Rubik+Beastly&family=Rubik+Dirt&family=Rubik+Gemstones&family=Rubik+Puddles&family=Schoolbell&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+
+:root {
+    --dark1: #0000004d;
+    --dark2: #181c20;
+    --dark3: #212529;
+    --dark4: #2d3135;
+    --dark5: #424549;
+    --dark6: #404346;
+    --dark7: #9c9c9c;
+    --dark8: #d6d4d7;
+    --dark9: #262a2e;
+    --red1: #cf2631;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-image: url(../image/rasm.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    padding: 20px;
+
+    box-shadow: 3px 3px 20px var(--dark1);
+    background: var(--dark3);
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 50px;
+}
+
+.header .filterEntries{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filterEntries .entries{
+    color: var(--dark8);
+}
+
+.filterEntries .entries section, .filterEntries .filter input{
+    padding: 5px 10px;
+    border: 1px solid var(--dark6);
+    color: var(--dark8);
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.filterEntries .entries select{
+    padding: 5px 10px;
+}
+
+
+.filterEntries .filter{
+    display: flex;
+    align-items: center;
+}
+
+.filter label{
+    color: var(--dark8);
+    margin-right: 5px;
+
+}
+
+.filter input:focus{
+    border-color: var(--dark7);
+}
+
+
+.header .addMemberBtn{
+    margin-bottom: 15px;
+}
+
+header .addMemberBtn button, .popup header .closeBtn, .popup footer .submitBtn{
+    padding: 9px 14px;
+    color: var(--dark8);
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    pointer-events: auto;
+    outline: none;
+    border: 1px solid var(--dark6);
+    background: var(--dark4);
+    border-radius: 5px;
+}
+
+.addMemberBtn button:hover{
+    background: var(--dark5);
+}
+
+.container table{
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table .heading{
+    background: var(--dark5);
+    background: transparent;
+    color: var(--dark8);
+}
+
+table .heading th:hover{
+    background: var(--dark4);
+    transition: 0.3s;
+}
+
+table tr th, table tr td{
+    padding: 4px 15px;
+    color: var(--dark8);
+}
+
+table tr th{
+    padding: 12px 15px;
+}
+
+table tr td:nth-child(1), table tr td:nth-child(2){
+    text-align: center;
+}
+
+table tr:hover{
+    cursor: pointer;
+    background: var(--dark9);
+}
+
+table tr td{
+    border-bottom: 1px solid var(--dark6);
+}
+
+table tr:first-child td{
+    border-top: 1px solid var(--dark6);
+}
+
+table tbody tr:nth-child(odd){
+    background: var(--dark9);
+}
+
+table tbody tr:nth-child(odd) > td:nth-child(3){
+    background: var(--dark4);
+}
+
+table tr td{
+    font-size: 15px;
+}
+
+table td button{
+    margin: 0 3px;
+    padding: 5px;
+    width: 35px;
+    color: var(--dark8);
+    background: var(--dark5);
+    font-size: 16px;
+    cursor: pointer;
+    pointer-events: auto;
+    outline: none;
+    border: 1px solid var(--dark7);
+}
+
+.container footer{
+    margin-top: 25px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container footer span{
+    color: var(--dark8);
+}
+
+footer .pagination{
+    display: flex;
+}
+
+
+footer .pagination button{
+    width: 40px;
+    padding: 5px 0;
+    color: var(--dark8);
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    pointer-events: auto;
+    outline: none;
+    border: 1px solid var(--dark6);
+    border-left: none;
+    margin: 0;
+}
+
+.pagination button:first-child{
+    width: 85px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-left: 1px solid var(--dark6);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.pagination button:last-child{
+    width: 85px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+     opacity: 0.6;
+    pointer-events: none;
+}
+
+.pagination button.active, .pagination button:hover{
+    background: var(--red1);
+}
+
+table tr .empty{
+    padding: 10px;
+    background: var(--dark9);
+
+}
+
+
+/* ====================== */
+
+
+.dark_bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark_bg .popup{
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
+    background: var(--dark6);
+    transition: 0.4s;
+    user-select: none;
+}
+
+.popup header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--dark7);
+    padding: 10px 20px;
+}
+
+.popup header .closeBtn{
+    font-size: 30px;
+    font-weight: 300;
+    padding: 0 15px;
+}
+
+
+.popup header .closeBtn:hover, .popup footer .submitBtn:hover{
+   border-color: var(--dark7);
+   transition: 0.3s;
+}
+
+.popup footer{
+    border-top: 1px solid var(--dark7);
+    padding: 12px 20px;
+    text-align: right;
+}
+
+.popup form{
+    padding: 10px 20px;
+    display: flex;
+    align-items: start;
+}
+
+.popup .imgholder{
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 50px;
+    margin-top: 15px;
+}
+
+.popup .imgholder .upload{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    cursor: pointer;
+    display: none;
+}
+.imgholder:hover .upload{
+    display: flex;
+}
+.imgholder .upload input{
+    display: none;
+}
+
+.imgholder .upload i{
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.imgholder .img{
+    width: 100%;
+    height: 100%;
+}
+
+form .inputFieldContainer .nameField,
+form .inputFieldContainer .ageCityField,
+form .inputFieldContainer .postSalary{
+    display: flex;
+    justify-content: space-between;
+}
+
+form .inputFieldContainer .nameField input,
+form .inputFieldContainer .ageCityField input,
+form .inputFieldContainer .postSalary input{
+    width: 200px;
+}
+
+.inputFieldContainer .form__control{
+    margin: 10px 0;
+}
+
+.inputFieldContainer .form__control label{
+    display: block;
+    color: var(--dark8);
+    margin-bottom: 5px;
+}
+.img{
+    border-radius: 20px;
+}
+
+.form__control input{
+    padding: 10px;
+    border: 1px solid var(--dark6);
+    color: var(--dark8);
+    background: var(--dark4);
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.form__control input:focus,
+.form__control input:valid{
+    border-color: var(--dark7);
+}
+
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button{
+    display: none;
+}
+
+.active{
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+
+}
+
+
+
